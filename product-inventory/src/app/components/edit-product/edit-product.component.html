@@ -1,0 +1,48 @@
+<div class="container mt-5">
+    <h2>Edit Product</h2>
+    <form [formGroup]="editProductForm" (ngSubmit)="updateProduct()">
+      <div class="mb-3">
+        <label>Name</label>
+        <input type="text" class="form-control" formControlName="name">
+        <div *ngIf="editProductForm.controls['name'].invalid && editProductForm.controls['name'].touched" class="text-danger">
+          Name is required.
+        </div>
+      </div>
+  
+      <div class="mb-3">
+        <label>Description</label>
+        <input type="text" class="form-control" formControlName="description">
+        <div *ngIf="editProductForm.controls['description'].invalid && editProductForm.controls['description'].touched" class="text-danger">
+          Description is required.
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label>Manufacturer</label>
+        <input type="text" class="form-control" formControlName="manufacturer">
+        <div *ngIf="editProductForm.controls['manufacturer'].invalid && editProductForm.controls['manufacturer'].touched" class="text-danger">
+          Manufacturer is required.
+        </div>
+      </div>
+  
+      <div class="mb-3">
+        <label>Price</label>
+        <input type="number" class="form-control" formControlName="price">
+        <div *ngIf="editProductForm.controls['price'].invalid && editProductForm.controls['price'].touched" class="text-danger">
+          Price must be greater than 0.
+        </div>
+      </div>
+  
+      <div class="mb-3">
+        <label>Quantity</label>
+        <input type="number" class="form-control" formControlName="quantity">
+        <div *ngIf="editProductForm.controls['quantity'].invalid && editProductForm.controls['quantity'].touched" class="text-danger">
+          Quantity must be greater than 0.
+        </div>
+      </div>
+  
+      <button type="submit" class="btn btn-warning" [disabled]="editProductForm.invalid">Update Product</button>
+      <button class="btn btn-secondary" routerLink="/products">Cancel</button>
+    </form>
+  </div>
+  
