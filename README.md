@@ -40,7 +40,7 @@ This is a responsive **Single Page Application (SPA)** developed using **Angular
 
 1. Clone the project
 ```bash
-git clone https://github.com/your-username/product-inventory.git
+git clone https://github.com/YeswanthVelugoti/Product-Inventory-Management-System.git
 cd product-inventory
 ```
 
